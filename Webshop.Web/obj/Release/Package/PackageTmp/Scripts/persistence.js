@@ -1,36 +1,66 @@
 ﻿
-function SetPersistence(item)
-{
+function SetPersistence(item) {
     var storage = $(item).attr("id");
     var persistOnDataBase;
 
-    if (storage == 'memory')
-    {
+    if (storage == 'memory') {
         $("#memory").attr("disabled", "disabled");
         $("#database").removeAttr("disabled");
         persistOnDataBase = false;
     }
-    else
-    {
+    else {
         $("#database").attr("disabled", "disabled");
         $("#memory").removeAttr("disabled");
         persistOnDataBase = true;
     }
 
     $.ajax({
-       
-        type: 'POST', // use Get for [HttpGet] action or POST for [HttpPost]
-        //url: '@Url.Action("SetPersistence", "Product")', // Controller/View  
+
+        type: 'POST', 
         url: '/../../Product/SetPersistence',
-        //contentType: 'application/json', not needed
-        //dataType: 'jsonp', jsonp is for sending to a site other than the current one.. 
-        data: { 'persistOnDataBase': persistOnDataBase},  // no need to stringify
+     
+        data: { 'persistOnDataBase': persistOnDataBase }, 
         success: function (result) {
             if (result == true) {
-                
+
             } else {
-                
+
             }
+        }
+    });
+}
+
+
+$(document).ready(function () {
+    GetPersistence();
+})
+
+function GetPersistence() {
+    $("#database").removeAttr("disabled");
+    $("#memory").removeAttr("disabled");
+
+    $.ajax({
+        url: '/../../Product/SetPersistence',
+        dataType: "json",
+        type: "GET",
+        contentType: 'application/json; charset=utf-8',
+        async: true,
+        processData: false,
+        cache: false,
+        success: function (data) {
+            var responseAjax = Boolean(data.responseText);
+            if (responseAjax) {
+                $("#database").attr("disabled", "disabled");
+                $("#memory").removeAttr("disabled");
+               
+            }
+            else {
+                $("#memory").attr("disabled", "disabled");
+                $("#database").removeAttr("disabled");
+            }
+        },
+        error: function (xhr) {
+            alert('error');
         }
     });
 }
