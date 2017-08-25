@@ -22,7 +22,7 @@ namespace Webshop.Web.Models
         public string Description { get; set; }
 
         [Required]
-        [Display(Name = "Price per unit")]
+        [Display(Name = "Price per unit"), DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
         public double UnitPrice { get; set; }
 
         [Display(Name = "Categories")]

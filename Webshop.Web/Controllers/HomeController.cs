@@ -13,9 +13,9 @@ namespace Webshop.Web.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Storage()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "In this area you can set the desired storage mode";
 
             return View();
         }

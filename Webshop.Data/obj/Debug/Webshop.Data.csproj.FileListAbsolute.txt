@@ -8,3 +8,13 @@ D:\Carlos\webshop\Webshop.Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\Carlos\webshop\Webshop.Data\obj\Debug\Webshop.Data.csprojResolveAssemblyReference.cache
 D:\Carlos\webshop\Webshop.Data\obj\Debug\Webshop.Data.dll
 D:\Carlos\webshop\Webshop.Data\obj\Debug\Webshop.Data.pdb
+D:\Repositories\webshop\Webshop.Data\bin\Debug\Webshop.Data.dll.config
+D:\Repositories\webshop\Webshop.Data\bin\Debug\Webshop.Data.dll
+D:\Repositories\webshop\Webshop.Data\bin\Debug\Webshop.Data.pdb
+D:\Repositories\webshop\Webshop.Data\bin\Debug\EntityFramework.dll
+D:\Repositories\webshop\Webshop.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Repositories\webshop\Webshop.Data\bin\Debug\EntityFramework.xml
+D:\Repositories\webshop\Webshop.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Repositories\webshop\Webshop.Data\obj\Debug\Webshop.Data.csprojResolveAssemblyReference.cache
+D:\Repositories\webshop\Webshop.Data\obj\Debug\Webshop.Data.dll
+D:\Repositories\webshop\Webshop.Data\obj\Debug\Webshop.Data.pdb

@@ -77,21 +77,20 @@ namespace Webshop.Web.Controllers
         
 
         [HttpPost]
-        public ActionResult SetPersistence(string persistOnDataBase)
+        public ActionResult SetPersistence(bool persistOnDataBase)
         {
             try
             {
-                bool persist;
-                if (ModelState.IsValid && Boolean.TryParse(persistOnDataBase, out persist))
+                if (ModelState.IsValid)
                 {
-                    ProductManager.PersistData = persist;
+                    ProductManager.PersistData = persistOnDataBase;
                 }
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                return Json(new { success = false, responseText = "Storage has not benn changed, check errors" + ex.Message }, JsonRequestBehavior.AllowGet);
             }
-            return View();
+            return Json(new { success = true, responseText = "Storage changed successfully!" }, JsonRequestBehavior.AllowGet);
         }
 
         // POST: Product/Edit/5

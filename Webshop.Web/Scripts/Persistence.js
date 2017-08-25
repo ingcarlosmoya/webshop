@@ -1,7 +1,22 @@
 ﻿
-function SetPersistence(persistOnDataBase)
+function SetPersistence(item)
 {
-    alert(persistOnDataBase);
+    var storage = $(item).attr("id");
+    var persistOnDataBase;
+
+    if (storage == 'memory')
+    {
+        $("#memory").attr("disabled", "disabled");
+        $("#database").removeAttr("disabled");
+        persistOnDataBase = false;
+    }
+    else
+    {
+        $("#database").attr("disabled", "disabled");
+        $("#memory").removeAttr("disabled");
+        persistOnDataBase = true;
+    }
+
     $.ajax({
        
         type: 'POST', // use Get for [HttpGet] action or POST for [HttpPost]
@@ -12,9 +27,9 @@ function SetPersistence(persistOnDataBase)
         data: { 'persistOnDataBase': persistOnDataBase},  // no need to stringify
         success: function (result) {
             if (result == true) {
-                alert("cambio")
+                
             } else {
-                alert("fallo");
+                
             }
         }
     });

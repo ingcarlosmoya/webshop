@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Edit product</h2>
 
 
 @using (Html.BeginForm())
@@ -12,7 +12,6 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>ProductViewModel</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -57,21 +56,22 @@
                 }
             </div>
         </div>
-
         <div class="form-group">
+
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <a href="/Product/List" class="btn btn-primary btn-sm">
+                    <span class="glyphicon glyphicon-list"></span> Back to List
+                </a>
+
+                <button type="submit" value="Edit" class="btn btn-success  btn-sm">
+                    <span class="glyphicon glyphicon-floppy-disk"></span> Update
+                </button>
+
             </div>
         </div>
     </div>
 }
 
-    <div>
-        <a href="/Product/List" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-list"></span>
-        </a>
-        Back to List
-    </div>
 
 
 @section Scripts {
