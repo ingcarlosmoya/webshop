@@ -5,5 +5,6 @@ D:\Carlos\webshop\Webshop.Model\obj\Debug\Webshop.Model.dll
 D:\Carlos\webshop\Webshop.Model\obj\Debug\Webshop.Model.pdb
 D:\Repositories\webshop\Webshop.Model\bin\Debug\Webshop.Model.dll
 D:\Repositories\webshop\Webshop.Model\bin\Debug\Webshop.Model.pdb
+D:\Repositories\webshop\Webshop.Model\obj\Debug\Webshop.Model.csprojResolveAssemblyReference.cache
 D:\Repositories\webshop\Webshop.Model\obj\Debug\Webshop.Model.dll
 D:\Repositories\webshop\Webshop.Model\obj\Debug\Webshop.Model.pdb
