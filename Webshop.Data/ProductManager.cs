@@ -8,19 +8,26 @@ namespace Webshop.Data
 {
     public static class ProductManager
     {
-        public static int Save(Product product)
+
+        public static void Delete(int id)
         {
             try
             {
                 using (var context = new WebshopEntities())
                 {
-                    context.Product.Add(product);
-                    context.SaveChanges();
-                    return product.Id;
+                    var dataProduct = context.Product.Where(p => p.Id == id).FirstOrDefault();
+                    if (dataProduct != null)
+                    {
+                        context.Product.Remove(dataProduct);
+                        context.SaveChanges();
+                    }
+
                 }
+
             }
             catch (Exception ex)
             {
+
                 throw ex;
             }
         }
@@ -63,7 +70,22 @@ namespace Webshop.Data
             }
         }
 
-        
+        public static int Save(Product product)
+        {
+            try
+            {
+                using (var context = new WebshopEntities())
+                {
+                    context.Product.Add(product);
+                    context.SaveChanges();
+                    return product.Id;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public static void Update(int id, Product product)
         {
@@ -72,7 +94,7 @@ namespace Webshop.Data
                 using (var context = new WebshopEntities())
                 {
                     var dataProduct = context.Product.Where(p => p.Id == id).FirstOrDefault();
-                    if (dataProduct !=  null)
+                    if (dataProduct != null)
                     {
                         dataProduct.Description = product.Description;
                         dataProduct.Name = dataProduct.Name;
@@ -80,29 +102,6 @@ namespace Webshop.Data
                         dataProduct.UpdateDateTime = DateTime.Now;
                         context.SaveChanges();
                     }
-                    
-                }
-
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-        }
-
-        public static void Delete(int id)
-        {
-            try
-            {
-                using (var context = new WebshopEntities())
-                {
-                    var dataProduct = context.Product.Where(p => p.Id == id).FirstOrDefault();
-                    if (dataProduct != null)
-                    {
-                        context.Product.Remove(dataProduct);
-                        context.SaveChanges();
-                    }
 
                 }
 
@@ -114,6 +113,5 @@ namespace Webshop.Data
             }
         }
 
-        
     }
 }

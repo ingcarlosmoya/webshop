@@ -13,7 +13,8 @@ namespace Webshop.Web.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            return View();
+
+            return RedirectToAction("Index", "Home");
         }
 
         // GET: Product/Details/5
@@ -30,12 +31,62 @@ namespace Webshop.Web.Controllers
             return View(product);
         }
 
-        // GET: Product/Create
+        // GET: Product/List
         public ActionResult List()
         {
             var product = new ProductViewModel();
-            List<ProductViewModel> products =  ProductManager.GetProducts();
+            List<ProductViewModel> products = ProductManager.GetProducts();
             return View(products);
+        }
+
+        // GET: Product/SetPersistence
+        public ActionResult SetPersistence()
+        {
+            try
+            {
+                return Json(new { success = true, responseText = ProductManager.PersistData }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, responseText = "Storage has not been changed, check errors" + ex.Message }, JsonRequestBehavior.AllowGet);
+            }
+
+        }
+
+        // GET: Product/Edit/5
+        public ActionResult Edit(int id)
+        {
+            ProductViewModel product = new ProductViewModel();
+            try
+            {
+                if (ModelState.IsValid)
+                    product = ProductManager.GetProductById(id);
+                else
+                    return RedirectToAction("Index", "Home");
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            return View(product);
+        }
+
+        //POST: Product/SetPersistence
+        [HttpPost]
+        public ActionResult SetPersistence(bool persistOnDataBase)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ProductManager.PersistData = persistOnDataBase;
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, responseText = "Storage has not been changed, check errors" + ex.Message }, JsonRequestBehavior.AllowGet);
+            }
+            return Json(new { success = true, responseText = "Storage changed successfully!" }, JsonRequestBehavior.AllowGet);
         }
 
         // POST: Product/Create
@@ -57,40 +108,6 @@ namespace Webshop.Web.Controllers
 
             return View(product);
 
-        }
-
-        // GET: Product/Edit/5
-        public ActionResult Edit(int id)
-        {
-            ProductViewModel product = new ProductViewModel();
-            try
-            {
-               product = ProductManager.GetProductById(id);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return View(product);
-        }
-
-        
-
-        [HttpPost]
-        public ActionResult SetPersistence(bool persistOnDataBase)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    ProductManager.PersistData = persistOnDataBase;
-                }
-            }
-            catch (Exception ex)
-            {
-                return Json(new { success = false, responseText = "Storage has not benn changed, check errors" + ex.Message }, JsonRequestBehavior.AllowGet);
-            }
-            return Json(new { success = true, responseText = "Storage changed successfully!" }, JsonRequestBehavior.AllowGet);
         }
 
         // POST: Product/Edit/5
@@ -119,11 +136,14 @@ namespace Webshop.Web.Controllers
             ProductViewModel product = new ProductViewModel();
             try
             {
-                product = ProductManager.GetProductById(id);
+                if (ModelState.IsValid)
+                    product = ProductManager.GetProductById(id);
+                else
+                    return RedirectToAction("Index", "Home");
             }
             catch (Exception ex)
             {
-                throw ex;
+                return RedirectToAction("Index", "Home");
             }
             return View(product);
         }

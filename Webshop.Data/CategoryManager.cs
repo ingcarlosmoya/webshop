@@ -8,6 +8,26 @@ namespace Webshop.Data
 {
     public static class CategoryManager
     {
+
+        public static void DeleteProductCategoriesByProductId(int productId)
+        {
+            try
+            {
+                using (var context = new WebshopEntities())
+                {
+                    var productCategories = context.ProductCategory.Where(p => p.ProductId == productId).ToList();
+                    context.ProductCategory.RemoveRange(productCategories);
+                    context.SaveChanges();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public static List<Category> GetCategories()
         {
             try
@@ -58,25 +78,6 @@ namespace Webshop.Data
             }
             catch (Exception ex)
             {
-                throw ex;
-            }
-        }
-
-        public static void DeleteProductCategoriesByProductId(int productId)
-        {
-            try
-            {
-                using (var context = new WebshopEntities())
-                {
-                    var productCategories = context.ProductCategory.Where(p => p.ProductId == productId).ToList();
-                    context.ProductCategory.RemoveRange(productCategories);
-                    context.SaveChanges();
-                }
-
-            }
-            catch (Exception ex)
-            {
-
                 throw ex;
             }
         }

@@ -11,6 +11,7 @@ namespace Webshop.Business
 {
     public static class Category
     {
+        #region Public
         public static string GetCategories()
         {
             var dataCategories = Data.CategoryManager.GetCategories();
@@ -21,17 +22,6 @@ namespace Webshop.Business
             string categoriesJson = JsonConvert.SerializeObject(categories);
 
             return categoriesJson;
-        }
-
-        private static Model.Category MapDataCategoryToModelCategory(Data.Category datacategory)
-        {
-            Model.Category category = new Model.Category();
-            if (datacategory != null)
-            {
-                category.Id = datacategory.Id;
-                category.Name = datacategory.Name;
-            }
-            return category;
         }
 
         internal static List<Model.Category> GetCategoriesByProductId(int productId)
@@ -50,5 +40,24 @@ namespace Webshop.Business
             return categories;
 
         }
+
+        #endregion
+
+        #region Private
+
+        private static Model.Category MapDataCategoryToModelCategory(Data.Category datacategory)
+        {
+            Model.Category category = new Model.Category();
+            if (datacategory != null)
+            {
+                category.Id = datacategory.Id;
+                category.Name = datacategory.Name;
+            }
+            return category;
+        }
+
+        #endregion
+
+
     }
 }

@@ -13,7 +13,6 @@ namespace Webshop.Model
         public string Name { get; set; }
         public double UnitPrice { get; set; }
         public string Serial { get; set; }
-
         public List<Category> Categories { get; set; }
     }
 }

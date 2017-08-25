@@ -1,0 +1,5 @@
+D:\Repositories\webshop\Webshop.Model\bin\Release\Webshop.Model.dll
+D:\Repositories\webshop\Webshop.Model\bin\Release\Webshop.Model.pdb
+D:\Repositories\webshop\Webshop.Model\obj\Release\Webshop.Model.csprojResolveAssemblyReference.cache
+D:\Repositories\webshop\Webshop.Model\obj\Release\Webshop.Model.dll
+D:\Repositories\webshop\Webshop.Model\obj\Release\Webshop.Model.pdb

@@ -1,0 +1,13 @@
+D:\Repositories\webshop\Webshop.Business\bin\Release\Webshop.Business.dll
+D:\Repositories\webshop\Webshop.Business\bin\Release\Webshop.Business.pdb
+D:\Repositories\webshop\Webshop.Business\bin\Release\Newtonsoft.Json.dll
+D:\Repositories\webshop\Webshop.Business\bin\Release\Webshop.Data.dll
+D:\Repositories\webshop\Webshop.Business\bin\Release\Webshop.Model.dll
+D:\Repositories\webshop\Webshop.Business\bin\Release\EntityFramework.dll
+D:\Repositories\webshop\Webshop.Business\bin\Release\Webshop.Data.pdb
+D:\Repositories\webshop\Webshop.Business\bin\Release\Webshop.Model.pdb
+D:\Repositories\webshop\Webshop.Business\bin\Release\Newtonsoft.Json.xml
+D:\Repositories\webshop\Webshop.Business\bin\Release\EntityFramework.xml
+D:\Repositories\webshop\Webshop.Business\obj\Release\Webshop.Business.csprojResolveAssemblyReference.cache
+D:\Repositories\webshop\Webshop.Business\obj\Release\Webshop.Business.dll
+D:\Repositories\webshop\Webshop.Business\obj\Release\Webshop.Business.pdb

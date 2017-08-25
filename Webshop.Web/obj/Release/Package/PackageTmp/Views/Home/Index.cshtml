@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Products Manager</h1>
+    <p class="lead">Welcome to the products manager application. This work is intended to be a test exercise</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p class="text-justify">
+            Here you can create, edit and delete products. Each product could belong to one or more categories.
+            The created products can be storaged in two diferents mode.
+            <strong>The memory mode</strong>  storage the data temporaly. So, once the session is closed your data will be deleted as well.
+            <strong>The database mode</strong> persist the products and they can be retrieved later!
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Repository</h2>
+        <p>The source code and the database schema can be found on a GitHub repository. It will be available temporaly until the test review is complete </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web publish</h2>
+        <p>This site has been deploy in Azure servers to check its functionalities <strong>on live!</strong><br />
+            It will be available temporaly until the test review is complete
+        </p>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <p class="text-right">
+            <a class="btn btn-primary btn-sm" href="@Url.Action("Storage", "Home")"><span class="glyphicon glyphicon-floppy-disk"></span> Set storage</a>
+            <a class="btn btn-primary btn-sm" href="@Url.Action("Create", "Product")"><span class="glyphicon glyphicon-plus"></span> Create product</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <p class="text-right">
+            <a class="btn btn-primary btn-sm" href="https://github.com/ingcarlosmoya/webshop"><span class="glyphicon glyphicon-search"></span> Check code</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <p class="text-right">
+            <a class="btn btn-primary btn-sm" href="https://github.com/ingcarlosmoya/webshop"><span class="glyphicon glyphicon-globe"></span> Check it!</a>
+        </p>
+    </div>
+</div>
