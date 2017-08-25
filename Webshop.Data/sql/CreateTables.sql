@@ -123,11 +123,6 @@ GO
 SET IDENTITY_INSERT [dbo].[Category] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Product] ON 
-
-GO
-INSERT [dbo].[Product] ([Id], [Name], [UnitPrice], [Serial], [Description], [CreateDateTime], [UpdateDateTime]) VALUES (1, N'asdfasd', 3432, N'23620171645439696727', N'9999999999', CAST(N'2017-08-24 16:45:43.970' AS DateTime), CAST(N'2017-08-24 16:45:57.367' AS DateTime))
-GO
-INSERT [dbo].[Product] ([Id], [Name], [UnitPrice], [Serial], [Description], [CreateDateTime], [UpdateDateTime]) VALUES (3, N'rrqwerqwe', 45646, N'23620171747191875332', NULL, CAST(N'2017-08-24 17:47:19.190' AS DateTime), CAST(N'2017-08-24 17:47:19.190' AS DateTime))
 GO
 SET IDENTITY_INSERT [dbo].[Product] OFF
 GO
@@ -156,7 +151,3 @@ REFERENCES [dbo].[Product] ([Id])
 GO
 ALTER TABLE [dbo].[ProductCategory] CHECK CONSTRAINT [FK_ProductCategory_Product]
 GO
-
-
-SELECT * FROM dbo.Category
-select * from dbo.Product
