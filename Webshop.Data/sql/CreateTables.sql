@@ -2,7 +2,7 @@ CREATE TABLE [dbo].[Category](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [varchar](100) NOT NULL,
 	[Description] [varchar](100) NULL,
-	[CreateDateTime] [datetime] NOT NULL,
+	[CreateDateTime] [datetime] NOT NULL, 
 	[UpdateDateTime] [datetime] NOT NULL,
  CONSTRAINT [PK_Category] PRIMARY KEY CLUSTERED 
 (
