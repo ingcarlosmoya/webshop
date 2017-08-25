@@ -1,0 +1,5 @@
+D:\Carlos\webshop\Webshop.Model\bin\Debug\Webshop.Model.dll
+D:\Carlos\webshop\Webshop.Model\bin\Debug\Webshop.Model.pdb
+D:\Carlos\webshop\Webshop.Model\obj\Debug\Webshop.Model.csprojResolveAssemblyReference.cache
+D:\Carlos\webshop\Webshop.Model\obj\Debug\Webshop.Model.dll
+D:\Carlos\webshop\Webshop.Model\obj\Debug\Webshop.Model.pdb

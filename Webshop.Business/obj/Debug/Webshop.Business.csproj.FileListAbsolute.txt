@@ -1,0 +1,13 @@
+D:\Carlos\webshop\Webshop.Business\obj\Debug\Webshop.Business.csprojResolveAssemblyReference.cache
+D:\Carlos\webshop\Webshop.Business\bin\Debug\Webshop.Business.dll
+D:\Carlos\webshop\Webshop.Business\bin\Debug\Webshop.Business.pdb
+D:\Carlos\webshop\Webshop.Business\bin\Debug\Newtonsoft.Json.dll
+D:\Carlos\webshop\Webshop.Business\bin\Debug\Webshop.Data.dll
+D:\Carlos\webshop\Webshop.Business\bin\Debug\Webshop.Model.dll
+D:\Carlos\webshop\Webshop.Business\bin\Debug\EntityFramework.dll
+D:\Carlos\webshop\Webshop.Business\bin\Debug\Webshop.Data.pdb
+D:\Carlos\webshop\Webshop.Business\bin\Debug\Webshop.Model.pdb
+D:\Carlos\webshop\Webshop.Business\bin\Debug\Newtonsoft.Json.xml
+D:\Carlos\webshop\Webshop.Business\bin\Debug\EntityFramework.xml
+D:\Carlos\webshop\Webshop.Business\obj\Debug\Webshop.Business.dll
+D:\Carlos\webshop\Webshop.Business\obj\Debug\Webshop.Business.pdb
