@@ -97,8 +97,8 @@ namespace Webshop.Data
                     if (dataProduct != null)
                     {
                         dataProduct.Description = product.Description;
-                        dataProduct.Name = dataProduct.Name;
-                        dataProduct.UnitPrice = dataProduct.UnitPrice;
+                        dataProduct.Name = product.Name;
+                        dataProduct.UnitPrice = product.UnitPrice;
                         dataProduct.UpdateDateTime = DateTime.Now;
                         context.SaveChanges();
                     }
