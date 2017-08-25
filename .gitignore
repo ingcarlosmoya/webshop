@@ -1,2 +1,5 @@
-*/bin/*
-*/obj/*
+*/bin/Release/*.dll
+*/bin/Debug/*.dll
+Webshop.Web/bin/
+Webshop.Web/obj/*
+Webshop.Web/obj/*
